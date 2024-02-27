@@ -17,4 +17,7 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
   },
+  runtimeConfig: {
+    currencyApiKey: process.env.CURRENCY_API_KEY,
+  },
 })
