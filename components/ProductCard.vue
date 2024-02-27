@@ -1,5 +1,5 @@
 <template>
-  <div class="card text-center">
+  <div class="text-center">
     <img
       :alt="product.title"
       :src="product.image"
