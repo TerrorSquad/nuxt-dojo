@@ -1,7 +1,13 @@
 <template>
   <div>
+    <NuxtLink to="/">Nuxt Dojo</NuxtLink>
+
     <h2>About</h2>
-    <p>Lorem ipsum</p>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </div>
 </template>
 
