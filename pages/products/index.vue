@@ -6,15 +6,7 @@
         :key="product.id"
         class="bg-white p-4 shadow-md"
       >
-        <NuxtLink :to="`/products/${product.id}`">
-          <img
-            :src="product.image"
-            :alt="product.title"
-            class="w-ful h-48 object-cover"
-          />
-          <h2 class="mt-2 text-lg font-bold">{{ product.title }}</h2>
-          <p class="text-gray-500">{{ product.price }}</p>
-        </NuxtLink>
+        <ProductCard :product="product" />
       </div>
     </div>
   </div>
