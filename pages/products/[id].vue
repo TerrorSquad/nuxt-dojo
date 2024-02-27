@@ -5,8 +5,8 @@
 <script lang="ts" setup>
 definePageMeta({
   layout: "products",
-});
+})
 
-const route = useRoute();
-const id = route.params.id;
+const route = useRoute()
+const id = route.params.id
 </script>
