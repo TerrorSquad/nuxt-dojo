@@ -7,10 +7,6 @@
 <script lang="ts" setup>
 import type { Product } from "~/types/product.d.ts"
 
-definePageMeta({
-  layout: "products",
-})
-
 const route = useRoute()
 const id = route.params.id
 
@@ -19,4 +15,13 @@ const uri = `https://fakestoreapi.com/products/${id}`
 const { data: product } = await useFetch<Product>(uri, {
   key: `${id}`,
 })
+
+if (!product.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Product not found",
+    message: "The product you are looking for does not exist.",
+    fatal: true,
+  })
+}
 </script>
