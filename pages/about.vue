@@ -5,9 +5,19 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
       labore et dolore magna aliqua.
     </p>
+    <p>{{ data }}</p>
   </div>
 </template>
 
-<script setup lang="ts"></script>
-
-<style scoped></style>
+<script setup lang="ts">
+const { data } = await useFetch("/api/ninja")
+</script>
+<style scoped>
+h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+p {
+  margin: 20px 0;
+}
+</style>
